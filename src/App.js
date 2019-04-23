@@ -10,6 +10,9 @@ import './App.css';             // Recommendation: no individual style files. Ju
 import Greet from './Greet';
 import Counter from './Counter';
 
+// When you import, you're declaring a variable name
+import ClickyCounter from './ClickyCounter';
+
 // let badBadBad = 2;
 // // NOooooooOOOoOOooOOoO!
 // setInterval(() => {
@@ -23,24 +26,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Counter />
-        <Counter />
-        <Counter />
-        <Greet />
-        {/* This is a comment in JSX */}
-        <Greet whom="💩"/>
-        <Greet whom="Oakley" />
-        <Greet whom="Milla" />
-        <Greet whom="Angela" />
+        <ClickyCounter />        
+        <ClickyCounter />        
+        <ClickyCounter />        
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
