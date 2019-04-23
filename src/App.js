@@ -26,8 +26,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ClickyCounter />        
-        <ClickyCounter />        
+        <ClickyCounter startAt={300} />        
+        <ClickyCounter startAt={-42} />        
         <ClickyCounter />        
 
       </header>

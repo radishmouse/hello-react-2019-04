@@ -5,8 +5,9 @@ import React from 'react';
 class ClickyCounter extends React.Component {
     constructor(props) {
         super(props);
+        console.log(props);
         this.state = {
-            number: 0
+            number: props.startAt || 0     // use props.startAt if truthy, otherwise, use 0
         };
     }
 
@@ -17,6 +18,9 @@ class ClickyCounter extends React.Component {
                 <button
                     onClick={this._incrementNumber}  
                 >+</button>
+                <button
+                    onClick={this._decrementNumber}
+                >-</button>
             </div>
         );
     }
@@ -24,6 +28,12 @@ class ClickyCounter extends React.Component {
     _incrementNumber = () => {
         this.setState({
             number: this.state.number + 1
+        });
+    }
+
+    _decrementNumber = () => {
+        this.setState({
+            number: this.state.number - 1
         });
     }
 }
